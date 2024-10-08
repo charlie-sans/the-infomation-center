@@ -1,0 +1,20 @@
+{
+    "catagory": "programming",
+    "videos": {
+        "video1": {
+            "title": "Python Tutorial for Beginners",
+            "description": "Python Tutorial for Beginners",
+            "url": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+        },
+        "video2": {
+            "title": "Java Tutorial for Beginners",
+            "description": "Java Tutorial for Beginners",
+            "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+        },
+        "video3": {
+            "title": "C++ Tutorial for Beginners",
+            "description": "C++ Tutorial for Beginners",
+            "url": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+        }
+    }
+}
