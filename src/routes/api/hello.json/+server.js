@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 
 export async function GET() {
     return new Response(JSON.stringify({
-        message: 'This is a GET request!'
+        message: 'heyo! you cant quite do a GET request to this endpoint, try a POST request instead. if your confused as to what to do, visit the documentation at https://the-infomation-center.vercel.app/api-docs'
     }), {
         status: 200,
         headers: {
@@ -16,12 +16,13 @@ export async function GET() {
 }
 
 
+
 export async function POST(request) {
     const requestBody = await request.request.json();
     const { 'query-group': queryGroup, 'query-name': queryName, 'page-number': pageNumber, 'page-size': pageSize } = requestBody;
     console.log(queryGroup, queryName, pageNumber, pageSize);
 
-    const filePath = path.join(process.cwd(), 'static', 'videos', { queryGroup }.queryGroup + '.json');
+    const filePath = path.join(process.cwd(), 'static', 'videos', `${queryGroup}.json`);
     console.log(filePath);
 
     if (!fs.existsSync(filePath)) {
@@ -36,12 +37,16 @@ export async function POST(request) {
     const videos = fileContent.videos;
     const filteredVideos = Object.values(videos).filter(video => video.title.toLowerCase().includes(queryName.toLowerCase()));
 
-    const startIndex = (pageNumber - 1) * pageSize;
-    const paginatedVideos = filteredVideos.slice(startIndex, startIndex + pageSize);
+    const maxPageSize = 50;
+    const effectivePageSize = Math.min(pageSize, maxPageSize);
+    const startIndex = (pageNumber - 1) * effectivePageSize;
+    const paginatedVideos = filteredVideos.slice(startIndex, startIndex + effectivePageSize);
 
     return new Response(JSON.stringify({
         message: 'Search results',
-        data: paginatedVideos
+        data: paginatedVideos,
+        totalItems: filteredVideos.length,
+        totalPages: Math.ceil(filteredVideos.length / effectivePageSize)
     }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }
