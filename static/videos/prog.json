@@ -3,18 +3,22 @@
     "videos": {
         "video1": {
             "title": "Python Tutorial for Beginners",
-            "description": "Python Tutorial for Beginners",
-            "url": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "description": "a great tutorial for beginners to learn python",
+            "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+            "date-added": "2021-07-01"
+
         },
         "video2": {
             "title": "Java Tutorial for Beginners",
             "description": "Java Tutorial for Beginners",
-            "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "url": "https://www.youtube.com/watch?v=eIrMbAQSU34",
+            "date-added": "2021-07-01"
         },
         "video3": {
             "title": "C++ Tutorial for Beginners",
             "description": "C++ Tutorial for Beginners",
-            "url": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+            "url": "https://www.youtube.com/watch?v=vLnPwxZdW4Y",
+            "date-added": "2021-07-01"
         }
     }
 }

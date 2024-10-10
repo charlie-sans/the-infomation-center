@@ -1,12 +1,91 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <div class="content">
+        %sveltekit.head%
+
+    </div>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+</body>
+<style>
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        width: 200px;
+        text-align: center;
+    }
+    
+    .profile-pic {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    
+    .name {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    
+    .role {
+        color: #666;
+        margin-bottom: 10px;
+    }
+    
+    .description {
+        font-size: 0.9em;
+        color: #333;
+    }
+    
+    body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #ffcc00;
+    }
+    
+    .room {
+        background-color: #1e1e1e;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    .room h2 {
+        color: #ffcc00;
+    }
+    
+    .room p {
+        color: #cccccc;
+    }
+    
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #999999;
+    }
+</style>
+
 </html>

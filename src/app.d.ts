@@ -11,3 +11,11 @@ declare global {
 }
 
 export {};
+namespace App {
+	interface Error {
+		message: string;
+		code?: number;
+		details?: string;
+		timestamp?: Date;
+	}
+}

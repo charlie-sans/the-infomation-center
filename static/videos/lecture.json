@@ -1,0 +1,12 @@
+{
+    "catagory": "lecture",
+    "videos": {
+        "video1": {
+            "title": "applied mathematics",
+            "description": "a great tutorial for beginners in applied mathematics",
+            "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+            "date-added": "added on: 2021-07-01"
+
+        }
+    }
+}
